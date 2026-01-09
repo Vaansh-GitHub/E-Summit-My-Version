@@ -1,0 +1,19 @@
+.animate-header1{
+    transform:translateX(-150px);
+    opacity:0;
+    animation: slideIn 0.8s ease-out 0.2s 1 forwards;
+}
+
+.animate-header2{
+    transform: translateX(-150px);
+    opacity:0;
+    animation: slideIn 1s ease-out 0.5s 1 forwards; 
+}
+
+@keyframes slideIn{
+    from{}
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

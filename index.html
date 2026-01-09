@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E-Summit IIT Patna 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="E-Summit IIT Patna 2026 – India’s premier student entrepreneurship summit."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-950 text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur z-50 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="banner-logo.png" class="w-[20%]" alt="">
+    <!-- <h1 class="text-xl font-bold">E-Summit IIT Patna</h1> -->
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="#about" class="hover:text-orange-400">About</a>
+      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+      <a href="#events" class="hover:text-orange-400">Events</a>
+      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+      <a href="#register" class="bg-orange-500 px-4 py-2 rounded font-semibold hover:bg-orange-600">Register</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="main.png"
+      alt="E-Summit Battlefield Theme"
+      class="w-full h-full object-cover object-center"
+    />
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r 
+                from-slate-950/50 via-slate-900/50 to-slate-950/60">
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div>
+      <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full 
+                   bg-orange-500/10 text-orange-400 border border-orange-500/20">
+        16–18 January 2026 • IIT Patna
+      </span>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white" id="header1">
+        Build. Pitch. Scale.
+        <br />
+        <span class="bg-gradient-to-r from-orange-400 to-orange-600 
+                     bg-clip-text text-transparent">
+          E-Summit IIT Patna 2026
+        </span>
+      </h1>
+
+      <p class="mt-6 text-lg text-gray-300 max-w-xl" id="header2">
+        India’s premier student-led entrepreneurship summit featuring
+        startup competitions, investor panels, and hands-on workshops.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="mt-10 flex flex-wrap gap-5">
+        <a href="#register"
+           class="px-8 py-4 rounded-xl font-semibold text-lg
+                  bg-orange-500 hover:bg-orange-600
+                  shadow-[0_0_40px_rgba(255,115,0,0.5)]
+                  transition-all">
+          Register Now
+        </a>
+
+        <a href="#sponsors"
+           class="px-8 py-4 rounded-xl font-semibold text-lg
+                  border border-white/20 text-white
+                  hover:bg-white/10 transition">
+          Become a Sponsor
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT GLASS CARD (OPTIONAL) -->
+    <div class="hidden md:block">
+      <div class="bg-white/5 backdrop-blur-md border border-white/10 
+                  rounded-3xl p-8 shadow-2xl">
+
+        <h3 class="text-2xl font-bold mb-4 text-orange-400">
+          Why Attend?
+        </h3>
+
+        <ul class="space-y-4 text-gray-300">
+          <li>⚔️ Startup Pitch Battles</li>
+          <li>💡 Hackathons & Workshops</li>
+          <li>🎤 Investor & Founder Panels</li>
+          <li>🏆 ₹5L+ Prize Pool</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STATS -->
+<section class="py-16 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <h3 class="text-4xl font-bold text-orange-500">2,000+</h3>
+      <p class="text-gray-400">Attendees</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-orange-500">50+</h3>
+      <p class="text-gray-400">Speakers</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-orange-500">₹5L+</h3>
+      <p class="text-gray-400">Prize Pool</p>
+    </div>
+    <div>
+      <h3 class="text-4xl font-bold text-orange-500">100+</h3>
+      <p class="text-gray-400">Startups</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center">Featured Speakers</h2>
+
+    <div class="flex  gap-8 border overflow group">
+      <!-- Speaker Card -->
+      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
+        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold">Speaker Name</h3>
+        <p class="text-orange-400 text-sm">Founder, Startup</p>
+        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
+        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold">Speaker Name</h3>
+        <p class="text-orange-400 text-sm">Founder, Startup</p>
+        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
+        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold">Speaker Name</h3>
+        <p class="text-orange-400 text-sm">Founder, Startup</p>
+        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
+        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold">Speaker Name</h3>
+        <p class="text-orange-400 text-sm">Founder, Startup</p>
+        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
+      </div>
+
+      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
+        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold">Speaker Name</h3>
+        <p class="text-orange-400 text-sm">Founder, Startup</p>
+        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="py-24 bg-slate-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center">Competitions & Events</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+        <h3 class="text-2xl font-semibold text-orange-500">Startup Pitch</h3>
+        <p class="text-gray-400 mt-3">Pitch your idea to investors & VCs.</p>
+        <p class="mt-4 font-semibold">Prize: ₹2,00,000+</p>
+      </div>
+
+      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+        <h3 class="text-2xl font-semibold text-orange-500">Hackathon</h3>
+        <p class="text-gray-400 mt-3">48-hour problem-solving sprint.</p>
+        <p class="mt-4 font-semibold">Prize: ₹1,50,000+</p>
+      </div>
+
+      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+        <h3 class="text-2xl font-semibold text-orange-500">Workshops</h3>
+        <p class="text-gray-400 mt-3">Hands-on learning with experts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section id="sponsors" class="py-24">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-6">Partner With Us</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Get visibility among India’s brightest innovators and future founders.
+    </p>
+    <a href="#" class="inline-block mt-8 bg-orange-500 px-8 py-4 rounded text-lg font-semibold hover:bg-orange-600">
+      Download Sponsor Deck
+    </a>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register" class="py-24 bg-slate-900 text-center">
+  <h2 class="text-4xl font-bold mb-6">Register Now</h2>
+  <p class="text-gray-400 mb-8">Early bird registrations closing soon.</p>
+  <a href="#" class="bg-orange-500 px-10 py-4 rounded text-lg font-semibold hover:bg-orange-600">
+    Register for E-Summit 2026
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-gray-500 text-sm">
+  © 2026 E-Summit IIT Patna. All Rights Reserved.
+</footer>
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded",()=>{
+        document.getElementById("header1").classList.add("animate-header1");
+        document.getElementById("header2").classList.add("animate-header2");
+    })
+</script>
+</html>
