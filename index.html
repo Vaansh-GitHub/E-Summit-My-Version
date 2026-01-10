@@ -1,237 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>E-Summit IIT Patna 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="E-Summit IIT Patna 2026 – India’s premier student entrepreneurship summit."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="E-Summit IIT Patna 2026 – India’s premier student entrepreneurship summit." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-slate-950 text-white overflow-x-hidden">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur z-50 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <img src="banner-logo.png" class="w-[20%]" alt="">
-    <!-- <h1 class="text-xl font-bold">E-Summit IIT Patna</h1> -->
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#about" class="hover:text-orange-400">About</a>
-      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
-      <a href="#events" class="hover:text-orange-400">Events</a>
-      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
-      <a href="#register" class="bg-orange-500 px-4 py-2 rounded font-semibold hover:bg-orange-600">Register</a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur z-[100] border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="banner-logo.png" class="w-[20%]" alt="">
+      <!-- <h1 class="text-xl font-bold">E-Summit IIT Patna</h1> -->
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="#about" class="hover:text-orange-400">About</a>
+        <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+        <a href="#events" class="hover:text-orange-400">Events</a>
+        <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+        <a href="#register" class="bg-orange-500 px-4 py-2 rounded font-semibold hover:bg-orange-600">Register</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO SECTION -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- HERO SECTION -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
 
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img
-      src="main.png"
-      alt="E-Summit Battlefield Theme"
-      class="w-full h-full object-cover object-center"
-    />
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r 
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="main.png" alt="E-Summit Battlefield Theme"
+        class="w-full h-full object-cover object-left sm:object-center" />
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r 
                 from-slate-950/50 via-slate-900/50 to-slate-950/60">
+      </div>
     </div>
-  </div>
 
-  <!-- Content -->
-  <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-    <!-- LEFT CONTENT -->
-    <div>
-      <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full 
+      <!-- LEFT CONTENT -->
+      <div>
+        <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full 
                    bg-orange-500/10 text-orange-400 border border-orange-500/20">
-        16–18 January 2026 • IIT Patna
-      </span>
-
-      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white" id="header1">
-        Build. Pitch. Scale.
-        <br />
-        <span class="bg-gradient-to-r from-orange-400 to-orange-600 
-                     bg-clip-text text-transparent">
-          E-Summit IIT Patna 2026
+          16–18 January 2026 • IIT Patna
         </span>
-      </h1>
 
-      <p class="mt-6 text-lg text-gray-300 max-w-xl" id="header2">
-        India’s premier student-led entrepreneurship summit featuring
-        startup competitions, investor panels, and hands-on workshops.
-      </p>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white" id="header1">
+          Build. Pitch. Scale.
+          <br />
+          <span class="bg-gradient-to-r from-orange-400 to-orange-600 
+                     bg-clip-text text-transparent">
+            E-Summit IIT Patna 2026
+          </span>
+        </h1>
 
-      <!-- CTA BUTTONS -->
-      <div class="mt-10 flex flex-wrap gap-5">
-        <a href="#register"
-           class="px-8 py-4 rounded-xl font-semibold text-lg
+        <p class="mt-6 text-lg text-gray-300 max-w-xl" id="header2">
+          India’s premier student-led entrepreneurship summit featuring
+          startup competitions, investor panels, and hands-on workshops.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div class="mt-10 flex flex-wrap gap-5">
+          <a href="#register" class="px-8 py-4 rounded-xl font-semibold text-lg
                   bg-orange-500 hover:bg-orange-600
                   shadow-[0_0_40px_rgba(255,115,0,0.5)]
                   transition-all">
-          Register Now
-        </a>
+            Register Now
+          </a>
 
-        <a href="#sponsors"
-           class="px-8 py-4 rounded-xl font-semibold text-lg
+          <a href="#sponsors" class="px-8 py-4 rounded-xl font-semibold text-lg
                   border border-white/20 text-white
                   hover:bg-white/10 transition">
-          Become a Sponsor
-        </a>
+            Become a Sponsor
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- RIGHT GLASS CARD (OPTIONAL) -->
-    <div class="hidden md:block">
-      <div class="bg-white/5 backdrop-blur-md border border-white/10 
+      <!-- RIGHT GLASS CARD (OPTIONAL) -->
+      <div class="hidden md:block">
+        <div class="bg-white/5 backdrop-blur-md border border-white/10 
                   rounded-3xl p-8 shadow-2xl">
 
-        <h3 class="text-2xl font-bold mb-4 text-orange-400">
-          Why Attend?
-        </h3>
+          <h3 class="text-2xl font-bold mb-4 text-orange-400">
+            Why Attend?
+          </h3>
 
-        <ul class="space-y-4 text-gray-300">
-          <li>⚔️ Startup Pitch Battles</li>
-          <li>💡 Hackathons & Workshops</li>
-          <li>🎤 Investor & Founder Panels</li>
-          <li>🏆 ₹5L+ Prize Pool</li>
+          <ul class="space-y-4 text-gray-300">
+            <li>⚔️ Startup Pitch Battles</li>
+            <li>💡 Hackathons & Workshops</li>
+            <li>🎤 Investor & Founder Panels</li>
+            <li>🏆 ₹5L+ Prize Pool</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="relative py-24 bg-slate-950 overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-b
+                from-orange-500/10 via-transparent to-black">
+      </div>
+    </div>
+
+    <!-- Top Divider (Battlefield line) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-px
+              bg-gradient-to-r from-transparent via-orange-500/40 to-transparent">
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+        <!-- STAT CARD -->
+        <div class="stats_section relative bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-8
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <!-- Glow -->
+          <div class="absolute inset-0 bg-orange-500/10 blur-2xl
+                    opacity-0 stats_section-hover:opacity-100 transition">
+          </div>
+
+          <h3 class="text-4xl md:text-5xl font-extrabold text-orange-400 relative z-10">
+            2,000+
+          </h3>
+          <p class="mt-2 text-gray-300 relative z-10 tracking-wide">
+            Attendees
+          </p>
+        </div>
+
+        <!-- STAT CARD -->
+        <div class="stats_section relative bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-8
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <div class="absolute inset-0 bg-orange-500/10 blur-2xl
+                    opacity-0 stats_section-hover:opacity-100 transition"></div>
+
+          <h3 class="text-4xl md:text-5xl font-extrabold text-orange-400 relative z-10">
+            50+
+          </h3>
+          <p class="mt-2 text-gray-300 relative z-10 tracking-wide">
+            Speakers
+          </p>
+        </div>
+
+        <!-- STAT CARD -->
+        <div class="stats_section relative bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-8
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <div class="absolute inset-0 bg-orange-500/10 blur-2xl
+                    opacity-0 stats_section-hover:opacity-100 transition"></div>
+
+          <h3 class="text-4xl md:text-5xl font-extrabold text-orange-400 relative z-10">
+            ₹5L+
+          </h3>
+          <p class="mt-2 text-gray-300 relative z-10 tracking-wide">
+            Prize Pool
+          </p>
+        </div>
+
+        <!-- STAT CARD -->
+        <div class="stats_section relative bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-8
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <div class="absolute inset-0 bg-orange-500/10 blur-2xl
+                    opacity-0 stats_section-hover:opacity-100 transition"></div>
+
+          <h3 class="text-4xl md:text-5xl font-extrabold text-orange-400 relative z-10">
+            100+
+          </h3>
+          <p class="mt-2 text-gray-300 relative z-10 tracking-wide">
+            Startups
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Divider -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px
+              bg-gradient-to-r from-transparent via-orange-500/30 to-transparent">
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="relative py-28 overflow-hidden bg-slate-950">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-b 
+                from-orange-500/10 via-transparent to-black">
+      </div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+
+      <!-- LEFT: STORY -->
+      <div>
+        <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full 
+                   bg-orange-500/10 text-orange-400 border border-orange-500/20">
+          E-Summit’26: Where Creativity Meets Capital
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">
+          The Battlefield Where
+          <br />
+          <span class="bg-gradient-to-r from-orange-400 to-orange-600 
+                     bg-clip-text text-transparent">
+            Ideas Turn Into Enterprises
+          </span>
+        </h2>
+
+        <p class="mt-6 text-lg text-gray-300 max-w-xl">
+          E-Summit IIT Patna is a flagship entrepreneurship conclave that brings
+          together visionaries, builders, and risk-takers.
+          Here, ideas are challenged, refined, and forged into ventures
+          ready to face the real world.
+        </p>
+
+        <p class="mt-4 text-gray-400 max-w-xl">
+          Through intense competitions, high-impact talks, and hands-on workshops,
+          E-Summit serves as the proving ground for the next generation of founders.
+        </p>
+      </div>
+
+      <!-- RIGHT: IMMERSIVE FEATURE CARDS -->
+      <div class="grid gap-6">
+
+        <div class="about_section relative bg-white/5 backdrop-blur-xl 
+                  border border-white/10 rounded-2xl p-6 
+                  hover:border-orange-500/40 transition">
+
+          <div class="absolute inset-0 bg-gradient-to-r 
+                    from-orange-500/10 to-transparent 
+                    opacity-0 about_section-hover:opacity-100 transition">
+          </div>
+
+          <h3 class="text-xl font-semibold text-orange-400 relative z-10">
+            ⚔️ Compete
+          </h3>
+          <p class="text-gray-300 mt-2 relative z-10">
+            High-stakes startup pitch battles and hackathons
+            where ideas fight for validation.
+          </p>
+        </div>
+
+        <div class="about_section relative bg-white/5 backdrop-blur-xl 
+                  border border-white/10 rounded-2xl p-6 
+                  hover:border-orange-500/40 transition">
+
+          <div class="absolute inset-0 bg-gradient-to-r 
+                    from-orange-500/10 to-transparent 
+                    opacity-0 about_section-hover:opacity-100 transition">
+          </div>
+
+          <h3 class="text-xl font-semibold text-orange-400 relative z-10">
+            🧠 Learn
+          </h3>
+          <p class="text-gray-300 mt-2 relative z-10">
+            Tactical insights from founders, investors,
+            and operators who’ve survived the battlefield.
+          </p>
+        </div>
+
+        <div class="about_section relative bg-white/5 backdrop-blur-xl 
+                  border border-white/10 rounded-2xl p-6 
+                  hover:border-orange-500/40 transition">
+
+          <div class="absolute inset-0 bg-gradient-to-r 
+                    from-orange-500/10 to-transparent 
+                    opacity-0 about_section-hover:opacity-100 transition">
+          </div>
+
+          <h3 class="text-xl font-semibold text-orange-400 relative z-10">
+            🚀 Scale
+          </h3>
+          <p class="text-gray-300 mt-2 relative z-10">
+            Network with mentors and investors
+            to take your startup beyond ideation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section id="speakers" class="py-24 ">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Featured Speakers</h2>
+      <section class="speakers">
+        <div class="caraousal no-pointer">
+
+          <div class="group no-pointer">
+
+            <!-- Speaker Card -->
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+          </div>
+
+          <div aria-hidden class="group no-pointer">
+
+            <!-- Speaker Card -->
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+          </div>
+
+          <div aria-hidden class="group no-pointer">
+
+            <!-- Speaker Card -->
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+          </div>
+
+          <div aria-hidden class="group no-pointer">
+
+            <!-- Speaker Card -->
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="overlay no-pointer"></div>
+        <div id="gate1" class="no-pointer"></div>
+        <div id="gate2" class="no-pointer"></div>
+        <button id="reveal">Reveal!</button>
+      </section>
+    </div>
+  </section>
+
+  <!--PAST SPEAKERS-->
+
+  <!-- EVENTS -->
+  <section id="events" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center">Competitions & Events</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold text-orange-500">Startup Pitch</h3>
+          <p class="text-gray-400 mt-3">Pitch your idea to investors & VCs.</p>
+          <p class="mt-4 font-semibold">Prize: ₹2,00,000+</p>
+        </div>
+
+        <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold text-orange-500">Hackathon</h3>
+          <p class="text-gray-400 mt-3">48-hour problem-solving sprint.</p>
+          <p class="mt-4 font-semibold">Prize: ₹1,50,000+</p>
+        </div>
+
+        <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold text-orange-500">Workshops</h3>
+          <p class="text-gray-400 mt-3">Hands-on learning with experts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <!-- REGISTER + PARTNER SECTION -->
+  <section id="register" class="relative py-32 overflow-hidden">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="register.png" alt="E-Summit Battlefield Theme" class="w-full h-full object-cover object-center" />
+
+      <!-- Dark cinematic overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r
+                from-slate-970/80 via-slate-940/60 to-slate-970/80">
+      </div>
+
+      <!-- Bottom vignette -->
+      <div class="absolute inset-0 bg-gradient-to-t
+                from-black/80 via-transparent to-black/40">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <!--REGISTER -->
+        <div class="bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-3xl
+                  p-10 shadow-2xl">
+
+          <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full
+                     bg-orange-500/10 text-orange-400
+                     border border-orange-500/20">
+            For Participants
+          </span>
+
+          <h2 class="text-4xl font-extrabold text-white leading-tight">
+            Enter the
+            <span class="bg-gradient-to-r from-orange-400 to-orange-600
+                       bg-clip-text text-transparent">
+              Battlefield of Ideas
+            </span>
+          </h2>
+
+          <p class="mt-6 text-gray-300 text-lg">
+            Compete with the brightest minds, pitch bold ideas,
+            and build startups ready for the real world.
+          </p>
+
+          <ul class="mt-6 space-y-3 text-gray-300">
+            <li>⚔️ Startup Pitch Competitions</li>
+            <li>🧠 Workshops & Founder Talks</li>
+            <li>🏆 High-stakes Challenges & Prizes</li>
+          </ul>
+
+          <a href="#" class="inline-block mt-8 px-10 py-4 rounded-xl
+                  text-lg font-semibold text-white
+                  bg-orange-500 hover:bg-orange-600
+                  shadow-[0_0_50px_rgba(255,115,0,0.6)]
+                  transition">
+            Register Now
+          </a>
+        </div>
+
+        <!-- RIGHT: PARTNER -->
+        <div class="bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-3xl
+                  p-10 shadow-2xl">
+
+          <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full
+                     bg-orange-500/10 text-orange-400
+                     border border-orange-500/20">
+            For Organizations
+          </span>
+
+          <h2 class="text-4xl font-extrabold text-white leading-tight">
+            Partner
+            <span class="bg-gradient-to-r from-orange-400 to-orange-600
+                       bg-clip-text text-transparent">
+              With the Future
+            </span>
+          </h2>
+
+          <p class="mt-6 text-gray-300 text-lg">
+            Collaborate with India’s brightest student innovators
+            and gain unparalleled brand visibility.
+          </p>
+
+          <ul class="mt-6 space-y-3 text-gray-300">
+            <li>🚀 Direct access to top talent</li>
+            <li>📢 Brand exposure across platforms</li>
+            <li>🤝 Recruitment & startup engagement</li>
+          </ul>
+
+          <a href="#" class="inline-block mt-8 px-10 py-4 rounded-xl
+                  text-lg font-semibold text-white
+                  border border-white/20
+                  hover:bg-white/10 transition">
+            Partner With Us
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-black text-white">
+    <div class="max-w-[1400px] mx-auto px-6 pt-10">
+      <div class="h-px bg-white/70 w-full" />
+    </div>
+
+    <div class="text-center text-sm text-white/80 px-6 py-6 tracking-wide">
+      “E-CELL is not just a student body; it’s a medium responsible for
+      diffusing the spirit of Entrepreneurship in the veins of every
+      individual….”
+    </div>
+
+    <div class="max-w-[1400px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">About Us</h3>
+        <p class="text-sm text-white/80 leading-relaxed">
+          <span class="block">CONTACT US</span>
+          <span class="block">Phone: 7740929509, 7355797206</span>
+          <span class="block">Email: entrepreneurship@iitp.ac.in</span>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-3">Important Links</h3>
+        <ul class="text-sm text-white/80 space-y-1">
+          <li><a href="#" class="text-white hover:text-sky-400">Home</a></li>
+          <li><a href="#" class="text-white hover:text-sky-400">Campus Ambassador</a></li>
+          <li><a href="#" class="text-white hover:text-sky-400">Entrepreneur</a></li>
+          <li><a href="#" class="text-white hover:text-sky-400">Find Us Here</a></li>
         </ul>
       </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+        <div class="flex gap-4">
+          <a href=""
+            class="w-10 h-10 rounded-full bg-linear-to-br from-pink-500 to-yellow-500 flex items-center justify-center">
+            <img src="instagram.png" class="w-[30px] items-center  justify-self-end" alt="instagram">
+          </a>
+          <a href="" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+            <img src="facebook.png" class="w-[30px] items-center  justify-self-end" alt="facebook">
+          </a>
+          <a href="" class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+            <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
+          </a>
+          <a href="" class="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center">
+            <img src="twitter.png" class="w-[30px] items-center  justify-self-end" alt="twitter">
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="max-w-[1400px] mx-auto px-6">
+      <div class="h-px bg-white/70 w-full" />
+    </div>
+    <div class="py-10 text-center text-gray-500 text-sm">
+      © 2026 E-Summit IIT Patna. All Rights Reserved.
     </div>
 
-  </div>
-</section>
+  </footer>
 
-
-<!-- STATS -->
-<section class="py-16 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-    <div>
-      <h3 class="text-4xl font-bold text-orange-500">2,000+</h3>
-      <p class="text-gray-400">Attendees</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-orange-500">50+</h3>
-      <p class="text-gray-400">Speakers</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-orange-500">₹5L+</h3>
-      <p class="text-gray-400">Prize Pool</p>
-    </div>
-    <div>
-      <h3 class="text-4xl font-bold text-orange-500">100+</h3>
-      <p class="text-gray-400">Startups</p>
-    </div>
-  </div>
-</section>
-
-<!-- SPEAKERS -->
-<section id="speakers" class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-12 text-center">Featured Speakers</h2>
-
-    <div class="flex  gap-8 border overflow group">
-      <!-- Speaker Card -->
-      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
-        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold">Speaker Name</h3>
-        <p class="text-orange-400 text-sm">Founder, Startup</p>
-        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
-      </div>
-
-      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
-        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold">Speaker Name</h3>
-        <p class="text-orange-400 text-sm">Founder, Startup</p>
-        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
-      </div>
-
-      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
-        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold">Speaker Name</h3>
-        <p class="text-orange-400 text-sm">Founder, Startup</p>
-        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
-      </div>
-
-      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
-        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold">Speaker Name</h3>
-        <p class="text-orange-400 text-sm">Founder, Startup</p>
-        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
-      </div>
-
-      <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow">
-        <img src="/images/speaker1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4"/>
-        <h3 class="text-xl font-semibold">Speaker Name</h3>
-        <p class="text-orange-400 text-sm">Founder, Startup</p>
-        <p class="text-gray-400 text-sm mt-2">Topic: Building Scalable Startups</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVENTS -->
-<section id="events" class="py-24 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-12 text-center">Competitions & Events</h2>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
-        <h3 class="text-2xl font-semibold text-orange-500">Startup Pitch</h3>
-        <p class="text-gray-400 mt-3">Pitch your idea to investors & VCs.</p>
-        <p class="mt-4 font-semibold">Prize: ₹2,00,000+</p>
-      </div>
-
-      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
-        <h3 class="text-2xl font-semibold text-orange-500">Hackathon</h3>
-        <p class="text-gray-400 mt-3">48-hour problem-solving sprint.</p>
-        <p class="mt-4 font-semibold">Prize: ₹1,50,000+</p>
-      </div>
-
-      <div class="bg-slate-950 border border-white/10 rounded-xl p-6">
-        <h3 class="text-2xl font-semibold text-orange-500">Workshops</h3>
-        <p class="text-gray-400 mt-3">Hands-on learning with experts.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPONSORS -->
-<section id="sponsors" class="py-24">
-  <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold mb-6">Partner With Us</h2>
-    <p class="text-gray-400 max-w-2xl mx-auto">
-      Get visibility among India’s brightest innovators and future founders.
-    </p>
-    <a href="#" class="inline-block mt-8 bg-orange-500 px-8 py-4 rounded text-lg font-semibold hover:bg-orange-600">
-      Download Sponsor Deck
-    </a>
-  </div>
-</section>
-
-<!-- REGISTER -->
-<section id="register" class="py-24 bg-slate-900 text-center">
-  <h2 class="text-4xl font-bold mb-6">Register Now</h2>
-  <p class="text-gray-400 mb-8">Early bird registrations closing soon.</p>
-  <a href="#" class="bg-orange-500 px-10 py-4 rounded text-lg font-semibold hover:bg-orange-600">
-    Register for E-Summit 2026
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-10 text-center text-gray-500 text-sm">
-  © 2026 E-Summit IIT Patna. All Rights Reserved.
-</footer>
 
 </body>
 <script>
-    window.addEventListener("DOMContentLoaded",()=>{
-        document.getElementById("header1").classList.add("animate-header1");
-        document.getElementById("header2").classList.add("animate-header2");
-    })
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("header1").classList.add("animate-header1");
+    document.getElementById("header2").classList.add("animate-header2");
+  })
+
+  const button = document.getElementById("reveal");
+  button.addEventListener("click", () => {
+    console.log("reveal")
+    document.getElementById("gate1").classList.add("gate1");
+    document.getElementById("gate2").classList.add("gate2");
+    button.style.display = "none";
+
+    setTimeout(() => {
+      const cards = document.querySelectorAll(".speaker-card");
+
+
+      cards.forEach(element => {
+        element.classList.add("pointer");
+      });
+    }, 1000);
+
+  })
 </script>
+
 </html>

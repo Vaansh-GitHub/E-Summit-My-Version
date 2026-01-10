@@ -1,19 +1,148 @@
-.animate-header1{
-    transform:translateX(-150px);
-    opacity:0;
+.animate-header1 {
+    transform: translateX(-150px);
+    opacity: 0;
     animation: slideIn 0.8s ease-out 0.2s 1 forwards;
 }
 
-.animate-header2{
+.animate-header2 {
     transform: translateX(-150px);
-    opacity:0;
-    animation: slideIn 1s ease-out 0.5s 1 forwards; 
+    opacity: 0;
+    animation: slideIn 1s ease-out 0.5s 1 forwards;
 }
 
-@keyframes slideIn{
-    from{}
-    to{
+@keyframes slideIn {
+    from {}
+
+    to {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+
+.no-pointer{
+    pointer-events: none;
+}
+.pointer{
+    pointer-events:auto;
+}
+.speakers {
+    position: relative;
+}
+
+.overlay {
+    z-index: 50;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    box-shadow: 10px 0 15px inset rgba(5, 0, 34, 0.68), -10px 0 15px inset rgba(5, 0, 34, 0.509);
+}
+
+.caraousal {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    /*Prevents Caraousal to scroll */
+}
+
+.caraousal::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    gap: 3rem;
+    width: fit-content;
+    animation: slideOut 15s linear infinite;
+    padding-right: 3rem;
+}
+
+.speaker-card {
+    width: 40%;
+    min-width: 300px;
+    min-height: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.caraousal:has(.speaker-card:hover) .group {
+    animation-play-state: paused;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#gate1,
+#gate2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    top: 0;
+}
+#gate2 {
+    right: 0;
+}
+#gate1 {
+    left: 0;
+}
+.gate1 {
+    animation: openGate1 1.5s ease-in-out 0.5s 1 forwards;
+}
+
+.gate2 {
+    animation: openGate2 1.5s ease-in-out 0.5s 1 forwards;
+}
+
+@keyframes openGate1 {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-100%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes openGate2 {
+    0% {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(100%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+#reveal {
+    pointer-events:auto;
+    margin: auto;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.167);
+    padding: 5px 20px;
+    font-size: 30px;
+    border-radius: 1000px;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 51;
+    box-shadow: 2px 2px 15px blue, -2px -2px 15px red;
 }
