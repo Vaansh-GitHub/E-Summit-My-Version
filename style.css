@@ -90,7 +90,7 @@ html {
     }
 }
 
-#gate1,
+/* #gate1,
 #gate2 {
     position: absolute;
     width: 50%;
@@ -156,58 +156,12 @@ html {
     cursor: pointer;
     z-index: 51;
     box-shadow: 2px 2px 15px blue, -2px -2px 15px red;
-}
+} */
 
 
 .past-speakers {
     position: relative;
 }
-
-.caraousal-vertical .overlay {
-    backdrop-filter: blur(0.5px);
-    z-index: 50;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    box-shadow: 15px 10px 30px inset rgba(0, 0, 0, 0.68), -15px -10px 30px inset rgba(0, 0, 0, 0.509);
-}
-
-.caraousal-vertical .up,
-.caraousal-vertical .down {
-    padding: 10px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-}
-
-.caraousal-vertical .up .group {
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    width: fit-content;
-    animation: slideUp 40s linear infinite;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-}
-
-.caraousal-vertical .down .group {
-    display: flex;
-    gap: 3rem;
-    flex-direction: column;
-    width: fit-content;
-    animation: slideDown 40s linear infinite;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3rem;
-}
-
 
 .speaker-card {
     width: 100%;
@@ -219,26 +173,6 @@ html {
 
 .caraousal:has(.speaker-card:hover) .group {
     animation-play-state: paused;
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(100%);
-    }
 }
 
 .autoReveal {
@@ -279,4 +213,18 @@ html {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+.past-section-caraousal{
+    padding: 10px;
+    overflow-x: auto;
+    display: flex;
+    position: relative;
+}
+.past-section-group{
+    display: flex;
+    gap: 3rem;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
 }
