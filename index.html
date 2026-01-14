@@ -13,19 +13,61 @@
 <body class="bg-slate-950 text-white overflow-x-hidden">
 
   <!-- NAVBAR -->
-  <nav class="fixed top-0 w-full bg-slate-950/80 backdrop-blur z-[100] border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <img src="banner-logo.png" class="w-[20%]" alt="">
-      <!-- <h1 class="text-xl font-bold">E-Summit IIT Patna</h1> -->
-      <div class="hidden md:flex gap-6 text-sm">
-        <a href="#about" class="hover:text-orange-400">About</a>
-        <a href="#speakers" class="hover:text-orange-400">Speakers</a>
-        <a href="#events" class="hover:text-orange-400">Events</a>
-        <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
-        <a href="#register" class="bg-orange-500 px-4 py-2 rounded font-semibold hover:bg-orange-600">Register</a>
-      </div>
+  <!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur bg-slate-950/70 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <div class="text-xl font-bold text-white">
+      E-Summit ’26
     </div>
-  </nav>
+
+    <!-- DESKTOP LINKS -->
+    <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+      <a href="#about" class="hover:text-orange-400">About</a>
+      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+      <a href="#events" class="hover:text-orange-400">Events</a>
+      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+      <a href="#register"
+         class="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-orange-600">
+        Register
+      </a>
+    </div>
+
+    <!-- HAMBURGER BUTTON -->
+    <button id="menu-btn"
+      class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu"
+       class="md:hidden absolute top-full left-0 w-full
+              bg-slate-950/95 backdrop-blur
+              border-t border-white/10
+              hidden">
+
+    <div class="flex flex-col px-6 py-6 gap-5 text-gray-300">
+      <a href="#about" class="hover:text-orange-400">About</a>
+      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+      <a href="#events" class="hover:text-orange-400">Events</a>
+      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+
+      <a href="#register"
+         class="mt-4 bg-orange-500 text-white py-3 text-center rounded-lg font-semibold hover:bg-orange-600">
+        Register
+      </a>
+    </div>
+  </div>
+</nav>
+
+
 
   <!-- HERO SECTION -->
   <section class="relative min-h-screen flex items-center overflow-hidden">
@@ -219,14 +261,14 @@
           E-Summit’26: Where Creativity Meets Capital
         </span>
 
-        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">
+        <div class="text-4xl md:text-5xl font-extrabold leading-tight text-white autoReveal">
           The Battlefield Where
           <br />
           <span class="bg-gradient-to-r from-orange-400 to-orange-600 
                      bg-clip-text text-transparent">
             Ideas Turn Into Enterprises
           </span>
-        </h2>
+        </div>
 
         <p class="mt-6 text-lg text-gray-300 max-w-xl">
           E-Summit IIT Patna is a flagship entrepreneurship conclave that brings
@@ -305,9 +347,9 @@
   <!-- SPEAKERS -->
   <section id="speakers" class="py-24 ">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-center">Featured Speakers</h2>
+      <h2 class="text-4xl font-bold mb-12 text-center autoReveal">Featured Speakers</h2>
       <section class="speakers">
-        <div class="caraousal no-pointer">
+        <div class="caraousal caraousal-horizontal no-pointer">
 
           <div class="group no-pointer">
 
@@ -317,10 +359,10 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -329,39 +371,10 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
-              </div>
-            </div>
-
-          </div>
-
-          <div aria-hidden class="group no-pointer">
-
-            <!-- Speaker Card -->
-            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
-              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
-              <h3 class="text-xl font-semibold">Speaker Name</h3>
-              <p class="text-orange-400 text-sm">Founder, Startup</p>
-              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
-              </div>
-            </div>
-
-            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
-              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
-              <h3 class="text-xl font-semibold">Speaker Name</h3>
-              <p class="text-orange-400 text-sm">Founder, Startup</p>
-              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -375,10 +388,10 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -387,10 +400,10 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -404,10 +417,10 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -416,10 +429,39 @@
               <h3 class="text-xl font-semibold">Speaker Name</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
-                <img src="linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
-                <img src="instagram.png" class="w-[30px] items-center  justify-self-start" alt="instagram">
-                <img src="twitter.png" class="w-[30px] items-center justify-self-end" alt="twitter">
-                <img src="facebook.png" class="w-[30px] items-center justify-self-start" alt="facebook">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+          </div>
+
+          <div aria-hidden class="group no-pointer">
+
+            <!-- Speaker Card -->
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+              </div>
+            </div>
+
+            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card">
+              <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+              <h3 class="text-xl font-semibold">Speaker Name</h3>
+              <p class="text-orange-400 text-sm">Founder, Startup</p>
+              <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
               </div>
             </div>
 
@@ -435,6 +477,406 @@
   </section>
 
   <!--PAST SPEAKERS-->
+
+  <section id="past-speakers" class="py-24 ">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-12 text-center autoReveal">Past Speakers</h2>
+      <section class="past-speakers">
+        <div class="flex flex-row no-pointer gap-[10px]  h-[90vh] caraousal-vertical relative">
+          <div class="overlay no-pointer"></div>
+          <div class="up caraousal no-pointer  grow">
+            <div class="group no-pointer ">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+            <div class="group no-pointer ">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+            <div class="group no-pointer">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="down caraousal no-pointer  grow">
+            <div class="group no-pointer">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+            <div class="group no-pointer ">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+            <div class="group no-pointer">
+
+              <!-- Speaker Card -->
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+              <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
+                <img src="speaker.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
+                <h3 class="text-xl font-semibold">Speaker Name</h3>
+                <p class="text-orange-400 text-sm">Founder, Startup</p>
+                <div class="grid-cols-2 grid p-2 gap-4 justify-center items-center">
+                  <img src="linkedin.png" class="w-[40px] items-center  justify-self-end" alt="linkedin">
+                  <img src="instagram.png" class="w-[40px] items-center  justify-self-start" alt="instagram">
+                  <img src="twitter.png" class="w-[40px] items-center justify-self-end" alt="twitter">
+                  <img src="facebook.png" class="w-[40px] items-center justify-self-start" alt="facebook">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 
   <!-- EVENTS -->
   <section id="events" class="py-24 bg-slate-900">
@@ -636,6 +1078,20 @@
   window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("header1").classList.add("animate-header1");
     document.getElementById("header2").classList.add("animate-header2");
+
+    // Intersection Observer for autoReveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".autoReveal").forEach(element => {
+      observer.observe(element);
+    });
   })
 
   const button = document.getElementById("reveal");
@@ -653,6 +1109,14 @@
         element.classList.add("pointer");
       });
     }, 1000);
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
 
   })
 </script>
