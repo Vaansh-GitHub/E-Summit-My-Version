@@ -62,7 +62,7 @@ html {
     display: flex;
     gap: 3rem;
     width: fit-content;
-    animation: slideOut 15s linear infinite;
+    animation: slideOut 50s linear infinite;
     padding-right: 3rem;
     justify-content: center;
     align-items: center;
@@ -71,9 +71,15 @@ html {
 .speaker-card {
     width: 30%;
     min-width: 300px;
-    min-height: 200px;
+    height: 350px;
     font-size: 20px;
     border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.speaker-card:hover {
+    border: 1px solid #ff6b35;
+    box-shadow: 0 0 50px rgba(255, 155, 88, 0.3);
 }
 
 .caraousal:has(.speaker-card:hover) .group {
@@ -161,16 +167,12 @@ html {
 
 .past-speakers {
     position: relative;
+    overflow-y: hidden;
 }
 
-.speaker-card {
-    width: 100%;
-    min-width: 300px;
-    min-height: 200px;
-    font-size: 20px;
-    border-radius: 10px;
+.speaker-card div a {
+    margin:10% 1%;
 }
-
 .caraousal:has(.speaker-card:hover) .group {
     animation-play-state: paused;
 }
@@ -228,3 +230,12 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
