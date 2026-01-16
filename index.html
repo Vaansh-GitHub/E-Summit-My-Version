@@ -8,65 +8,108 @@
   <meta name="description" content="E-Summit IIT Patna 2026 – India’s premier student entrepreneurship summit." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet" />
 
 </head>
+<style>
+  .menu-item {
+    @apply group block px-6 py-4 rounded-xl
+          text-2xl font-semibold text-white
+          hover:border-orange-500/40
+          hover:text-orange-400
+          transition;
+  }
+  .menu-item:hover body{
+    backdrop-filter: blur(10px);
+  }
+</style>
+
 
 <body class="bg-slate-950 text-white overflow-x-hidden">
 
-  <!-- NAVBAR --> 
+  <!-- NAVBAR -->
   <nav class="fixed top-0 w-full z-50 backdrop-blur bg-slate-950/70 border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- LOGO -->
-    <div class="text-xl font-bold text-white">
-      <img src="banner-logo.png" class="w-[40%] md:w-[35%]">
+      <!-- LOGO -->
+      <div class="text-xl font-bold text-white">
+        <img src="banner-logo.png" class="w-[40%] md:w-[35%]">
+      </div>
+
+      <!-- DESKTOP LINKS -->
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+        <a href="#about" class="hover:text-orange-400">About</a>
+        <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+        <a href="#events" class="hover:text-orange-400">Events</a>
+        <a href="#teams" class="hover:text-orange-400">Team</a>
+        <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmysPhg2J2iUf6MEFLRjcxA404Mx4OdELkB83JbkWI5K2U8g/viewform"
+          class="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-orange-600">
+          Register
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button onclick="openMenu()" class="md:hidden text-white text-3xl">
+        ☰
+      </button>
+
+      <!-- MOBILE MENU OVERLAY -->
+      <div id="mobile-menu" class="fixed inset-0 z-[100] md:hidden
+            bg-slate-950/95 backdrop-blur-xl
+            translate-x-full transition-transform duration-500 ease-in-out">
+
+        <!-- Close Button -->
+        <button onclick="closeMenu()" class="absolute top-6 right-6 text-white text-3xl">
+          ✕
+        </button>
+
+        <div class="h-full flex flex-col justify-between px-8 py-16">
+
+          <!-- MENU ITEMS -->
+          <nav class="space-y-6 flex flex-col bg-white/0 backdrop-blur-100">
+            <a href="#about" onclick="closeMenu()" class="menu-item">About</a>
+            <a href="#events" onclick="closeMenu()" class="menu-item">Events</a>
+            <a href="#speakers" onclick="closeMenu()" class="menu-item">Speakers</a>
+            <a href="#team" onclick="closeMenu()" class="menu-item">Team</a>
+            <a href="#sponsors" onclick="closeMenu()" class="menu-item">Sponsors</a>
+          </nav>
+
+          <!-- REGISTER CTA -->
+          <div class="mt-10">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmysPhg2J2iUf6MEFLRjcxA404Mx4OdELkB83JbkWI5K2U8g/viewform" onclick="closeMenu()" class="block w-full text-center
+                px-8 py-4 rounded-2xl
+                text-lg font-bold
+                bg-gradient-to-r from-orange-500 to-orange-600
+                text-white
+                shadow-[0_0_40px_rgba(255,115,0,0.6)]
+                hover:scale-105 transition">
+              Register Now
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- DESKTOP LINKS -->
-    <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
-      <a href="#about" class="hover:text-orange-400">About</a>
-      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
-      <a href="#events" class="hover:text-orange-400">Events</a>
-      <a href="#teams" class="hover:text-orange-400">Team</a>
-      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmysPhg2J2iUf6MEFLRjcxA404Mx4OdELkB83JbkWI5K2U8g/viewform"
-         class="bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-orange-600">
-        Register
-      </a>
-    </div>
-
-    <!-- HAMBURGER BUTTON -->
-    <button id="menu-btn"
-      class="md:hidden text-white focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-
-  </div>
-
-  <!-- MOBILE MENU -->
-  <div id="mobile-menu"
-       class="md:hidden absolute top-full left-0 w-full
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full
               bg-slate-950/95 backdrop-blur
               border-t border-white/10
               hidden">
 
-    <div class="flex flex-col px-6 py-6 gap-5 text-gray-300">
-      <a href="#about" class="hover:text-orange-400">About</a>
-      <a href="#speakers" class="hover:text-orange-400">Speakers</a>
-      <a href="#events" class="hover:text-orange-400">Events</a>
-      <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
+      <div class="flex flex-col px-6 py-6 gap-5 text-gray-300">
+        <a href="#about" class="hover:text-orange-400">About</a>
+        <a href="#speakers" class="hover:text-orange-400">Speakers</a>
+        <a href="#events" class="hover:text-orange-400">Events</a>
+        <a href="#sponsors" class="hover:text-orange-400">Sponsors</a>
 
-      <a href="#register"
-         class="mt-4 bg-orange-500 text-white py-3 text-center rounded-lg font-semibold hover:bg-orange-600">
-        Register
-      </a>
+        <a href="#register"
+          class="mt-4 bg-orange-500 text-white py-3 text-center rounded-lg font-semibold hover:bg-orange-600">
+          Register
+        </a>
+      </div>
     </div>
-  </div>
   </nav>
 
   <!-- HERO SECTION -->
@@ -92,7 +135,9 @@
           16–18 January 2026 • IIT Patna
         </span>
 
-        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-white font-['Tiro Devanagari Sanskrit', serif]" id="header1">
+        <h1
+          class="text-5xl md:text-7xl font-extrabold leading-tight text-white font-['Tiro Devanagari Sanskrit', serif]"
+          id="header1">
           उद्यमक्षेत्रं कुरुक्षेत्रं
           <br />
           <span class="bg-gradient-to-r from-orange-400 to-orange-600 
@@ -108,7 +153,8 @@
 
         <!-- Register Now BUTTONS -->
         <div class="mt-10 flex flex-wrap gap-5">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmysPhg2J2iUf6MEFLRjcxA404Mx4OdELkB83JbkWI5K2U8g/viewform" class="px-8 py-4 rounded-xl font-semibold text-lg
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmysPhg2J2iUf6MEFLRjcxA404Mx4OdELkB83JbkWI5K2U8g/viewform"
+            class="px-8 py-4 rounded-xl font-semibold text-lg
                   bg-orange-500 hover:bg-orange-600
                   shadow-[0_0_40px_rgba(255,115,0,0.5)]
                   transition-all">
@@ -291,7 +337,7 @@
           </div>
 
           <h3 class="text-xl font-semibold text-orange-400 relative z-10">
-             Compete
+            Compete
           </h3>
           <p class="text-gray-300 mt-2 relative z-10">
             High-stakes startup pitch battles and hackathons
@@ -309,7 +355,7 @@
           </div>
 
           <h3 class="text-xl font-semibold text-orange-400 relative z-10">
-             Learn
+            Learn
           </h3>
           <p class="text-gray-300 mt-2 relative z-10">
             Tactical insights from founders, investors,
@@ -327,7 +373,7 @@
           </div>
 
           <h3 class="text-xl font-semibold text-orange-400 relative z-10">
-             Scale
+            Scale
           </h3>
           <p class="text-gray-300 mt-2 relative z-10">
             Network with mentors and investors
@@ -354,7 +400,8 @@
               <h3 class="text-xl font-semibold">Amit kumar</h3>
               <p class="text-orange-400 text-sm">Founder & Investor , Dropty</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/amit-kumardropty/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/amit-kumardropty/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -363,7 +410,8 @@
               <h3 class="text-xl font-semibold">Dr. Ashish Kumar</h3>
               <p class="text-orange-400 text-sm">Professor & Scientist, ICMR-RMRIMS</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/dr-ashish-kumar-60031a15/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
+                <a href="https://www.linkedin.com/in/dr-ashish-kumar-60031a15/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -372,8 +420,9 @@
               <h3 class="text-xl font-semibold">Bhanu Pratap</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CEO, Mediversal Healthcare</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/bhanu-pratap-b2a334a/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/bhanu-pratap-b2a334a/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -382,8 +431,9 @@
               <h3 class="text-xl font-semibold">Chirag Wadhera</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CTO, Revspot</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/chiragw15/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/chiragw15/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -392,8 +442,9 @@
               <h3 class="text-xl font-semibold">Dr. Buddha Chandrasekhar</h3>
               <p class="text-orange-400 text-sm">Chief Coordinating Officer, AICTE, Ministry of Education, GOI</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/chandrasekharbudha/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/chandrasekharbudha/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -401,8 +452,9 @@
               <h3 class="text-xl font-semibold">Dr. Mausumi Saha</h3>
               <p class="text-orange-400 text-sm">CEO, AIIMS Patna Incubation and Innovation Council</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/dr-mousumi-saha-33556948/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/dr-mousumi-saha-33556948/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -410,17 +462,19 @@
               <h3 class="text-xl font-semibold">Dr. Satyajit Singh</h3>
               <p class="text-orange-400 text-sm">Director & MD, Ruban Group of Hospitals</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/satyajit-singh-619645321/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/satyajit-singh-619645321/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
-            
+
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
               <img src="speaker/dr sripana.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
               <h3 class="text-xl font-semibold">Dr. Sriparna Saha</h3>
               <p class="text-orange-400 text-sm">Professor and Researcher, IIT Patna</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/sriparna-saha-1a1338161/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
+                <a href="https://www.linkedin.com/in/sriparna-saha-1a1338161/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
 
               </div>
             </div>
@@ -430,8 +484,9 @@
               <h3 class="text-xl font-semibold">Haren Chelle</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CEO, Pulse</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/harenchelle/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/harenchelle/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -440,8 +495,9 @@
               <h3 class="text-xl font-semibold">Dr. Kamlesh Jha</h3>
               <p class="text-orange-400 text-sm">Professor and Researcher, AIIMS Patna</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/kamlesh-jha-19576628/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/kamlesh-jha-19576628/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -449,13 +505,14 @@
               <h3 class="text-xl font-semibold">Dr. Nidhi Prasad</h3>
               <p class="text-orange-400 text-sm">Professor, IGIMS</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/nidhi-prasad-514156137/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/nidhi-prasad-514156137/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
           </div>
 
-          <div aria-hidden class="group no-pointer">
+          <div aria-hidden class="group no-pointer max-sm:hidden">
 
             <!-- Speaker Card -->
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -463,7 +520,8 @@
               <h3 class="text-xl font-semibold">Amit kumar</h3>
               <p class="text-orange-400 text-sm">Founder & Investor , Dropty</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/amit-kumardropty/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/amit-kumardropty/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -472,7 +530,8 @@
               <h3 class="text-xl font-semibold">Dr. Ashish Kumar</h3>
               <p class="text-orange-400 text-sm">Professor & Scientist, ICMR-RMRIMS</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/dr-ashish-kumar-60031a15/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
+                <a href="https://www.linkedin.com/in/dr-ashish-kumar-60031a15/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -481,8 +540,9 @@
               <h3 class="text-xl font-semibold">Bhanu Pratap</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CEO, Mediversal Healthcare</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/bhanu-pratap-b2a334a/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/bhanu-pratap-b2a334a/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -491,8 +551,9 @@
               <h3 class="text-xl font-semibold">Chirag Wadhera</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CTO, Revspot</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/chiragw15/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/chiragw15/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -501,8 +562,9 @@
               <h3 class="text-xl font-semibold">Dr. Buddha Chandrasekhar</h3>
               <p class="text-orange-400 text-sm">Chief Coordinating Officer, AICTE, Ministry of Education, GOI</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/chandrasekharbudha/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/chandrasekharbudha/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -510,8 +572,9 @@
               <h3 class="text-xl font-semibold">Dr. Mausumi Saha</h3>
               <p class="text-orange-400 text-sm">CEO, AIIMS Patna Incubation and Innovation Council</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/dr-mousumi-saha-33556948/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/dr-mousumi-saha-33556948/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -519,17 +582,19 @@
               <h3 class="text-xl font-semibold">Dr. Satyajit Singh</h3>
               <p class="text-orange-400 text-sm">Director & MD, Ruban Group of Hospitals</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/satyajit-singh-619645321/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/satyajit-singh-619645321/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
-            
+
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
               <img src="speaker/dr sripana.png" class="w-32 rounded-full mb-4 mx-auto object-contain" />
               <h3 class="text-xl font-semibold">Dr. Sriparna Saha</h3>
               <p class="text-orange-400 text-sm">Professor and Researcher, IIT Patna</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/sriparna-saha-1a1338161/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
+                <a href="https://www.linkedin.com/in/sriparna-saha-1a1338161/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
 
               </div>
             </div>
@@ -539,8 +604,9 @@
               <h3 class="text-xl font-semibold">Haren Chelle</h3>
               <p class="text-orange-400 text-sm">Co-Founder & CEO, Pulse</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/harenchelle/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/harenchelle/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
 
@@ -549,8 +615,9 @@
               <h3 class="text-xl font-semibold">Dr. Kamlesh Jha</h3>
               <p class="text-orange-400 text-sm">Professor and Researcher, AIIMS Patna</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/kamlesh-jha-19576628/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/kamlesh-jha-19576628/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
             <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 transition grow speaker-card pointer">
@@ -558,8 +625,9 @@
               <h3 class="text-xl font-semibold">Dr. Nidhi Prasad</h3>
               <p class="text-orange-400 text-sm">Professor, IGIMS</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                                <a href="https://www.linkedin.com/in/nidhi-prasad-514156137/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a> 
-                
+                <a href="https://www.linkedin.com/in/nidhi-prasad-514156137/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
+
               </div>
             </div>
           </div>
@@ -588,16 +656,19 @@
               <h3 class="text-xl font-semibold">Dr. Sandeep Jain</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/sandeep-jain-/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/sandeep-jain-/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
-            <div class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 hover:shadow-[0 0 10px 5px orange] transition grow speaker-card pointer">
+            <div
+              class="bg-slate-900 rounded-xl p-6 text-center hover:scale-105 hover:shadow-[0 0 10px 5px orange] transition grow speaker-card pointer">
               <img src="past-speakers/tanujain.jpeg" class="w-32 rounded-full mb-4 mx-auto object-contain" />
               <h3 class="text-xl font-semibold">Dr. Tanu Jain</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/dr-tanu-jain-4aa28a131/?originalSubdomain=in" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/dr-tanu-jain-4aa28a131/?originalSubdomain=in" target="_blank"><img
+                    src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -606,7 +677,8 @@
               <h3 class="text-xl font-semibold">Suresh Narasimha</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/cocreator/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/cocreator/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -615,7 +687,8 @@
               <h3 class="text-xl font-semibold">Anubhav Dubey</h3>
               <p class="text-orange-400 text-sm">Founder, Startup</p>
               <div class="flex p-2 gap-4 justify-center items-center">
-                <a href="https://www.linkedin.com/in/anubhavdubey/" target="_blank"><img src="linkedin.png" class="w-[40px] items-center justify-center" alt="linkedin"></a>
+                <a href="https://www.linkedin.com/in/anubhavdubey/" target="_blank"><img src="linkedin.png"
+                    class="w-[40px] items-center justify-center" alt="linkedin"></a>
               </div>
             </div>
 
@@ -626,410 +699,393 @@
   </section>
 
   <!--Events-->
- <section id="events" class="bg-slate-950 py-28">
+  <section id="events" class="bg-slate-950 py-28">
 
-  <!-- Section Heading -->
-  <div class="text-center mb-16">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-white">
-      Competitions &
-      <span class="text-orange-400">Events</span>
-    </h2>
-    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-      Explore the flagship events of E-Summit IIT Patna.
-    </p>
-  </div>
-
-  <!-- SCROLLABLE CONTAINER -->
-  <div class="relative">
-    <div class="flex gap-10 overflow-x-auto px-6 scrollbar-hide">
-
-      <!-- EVENT CARD -->
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event1.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Pitch It Up
-          </h3>
-          <a href="https://unstop.com/o/nqEKFuw?utm_medium=Share&utm_source=ECelliitpatna&utm_campaign=Competitions"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event2.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Bizz Quiz
-          </h3>
-
-
-          <a href="https://unstop.com/quiz/bizz-quiz-2026-e-summit26-iit-patna-indian-institute-of-technology-iit-patna-1608903?lb=SsrE5JT&utm_medium=Share&utm_source=WhatsApp"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event3.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Case Crux
-          </h3>
-
-          <a href="https://unstop.com/o/E4QKsnm?lb=SsrE5JT&utm_medium=Share&utm_source=ECelliitpatna&utm_campaign=Competitions"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event4.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Design Odyssey
-          </h3>
-
-          <a href="#"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event5.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Executive Desk
-          </h3>
-
-          <a href="#"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-      <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
-                  bg-gradient-to-b from-slate-900 to-black
-                  border border-white/10 rounded-2xl
-                  shadow-xl overflow-hidden
-                  hover:border-orange-500/40 transition">
-
-        <img src="/events/event6.png"
-             class="w-full h-[420px] object-cover
-                    hover:scale-105 transition duration-500" />
-
-        <div class="p-6">
-          <h3 class="text-xl font-bold text-orange-400">
-            Fix My College
-          </h3>
-
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScnI0LCoX6qfz_F-SJAEcmQ0cB6x-wJU44K3vlnSvPm8RHfQA/viewform"
-             class="block mt-5 w-full text-center
-                    px-6 py-3 rounded-lg
-                    bg-orange-500 text-white font-semibold
-                    hover:bg-orange-600 transition">
-            Register Now
-          </a>
-        </div>
-      </div>
-
-
-
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+        Competitions &
+        <span class="text-orange-400">Events</span>
+      </h2>
+      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+        Explore the flagship events of E-Summit IIT Patna.
+      </p>
     </div>
-  </div>
-</section>
 
- <!-- TEAM SECTION -->
-<section id="teams" class="relative py-28 bg-slate-950 overflow-hidden">
+    <!-- SCROLLABLE CONTAINER -->
+    <div class="relative">
+      <div class="flex gap-10 overflow-x-auto px-6 scrollbar-hide">
 
-  <!-- Background glow -->
-  <div class="absolute inset-0">
-    <div class="absolute inset-0 bg-gradient-to-b
+        <!-- EVENT CARD -->
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event1.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Pitch It Up
+            </h3>
+            <a href="https://unstop.com/o/nqEKFuw?utm_medium=Share&utm_source=ECelliitpatna&utm_campaign=Competitions"
+              class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+              Register Now
+            </a>
+          </div>
+        </div>
+
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event2.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Bizz Quiz
+            </h3>
+
+
+            <a href="https://unstop.com/quiz/bizz-quiz-2026-e-summit26-iit-patna-indian-institute-of-technology-iit-patna-1608903?lb=SsrE5JT&utm_medium=Share&utm_source=WhatsApp"
+              class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+              Register Now
+            </a>
+          </div>
+        </div>
+
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event3.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Case Crux
+            </h3>
+
+            <a href="https://unstop.com/o/E4QKsnm?lb=SsrE5JT&utm_medium=Share&utm_source=ECelliitpatna&utm_campaign=Competitions"
+              class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+              Register Now
+            </a>
+          </div>
+        </div>
+
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event4.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Design Odyssey
+            </h3>
+
+            <!-- <a href="#"
+             class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+            Register Now
+          </a> -->
+          </div>
+        </div>
+
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event5.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Executive Desk
+            </h3>
+
+            <!-- <a href="#"
+             class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+            Register Now
+          </a> -->
+          </div>
+        </div>
+
+        <div class="min-w-[320px] sm:min-w-[360px] lg:min-w-[380px]
+                  bg-gradient-to-b from-slate-900 to-black
+                  border border-white/10 rounded-2xl
+                  shadow-xl overflow-hidden
+                  hover:border-orange-500/40 transition">
+
+          <img src="/events/event6.png" class="w-full h-[420px] object-cover
+                    hover:scale-105 transition duration-500" />
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-orange-400">
+              Fix My College
+            </h3>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScnI0LCoX6qfz_F-SJAEcmQ0cB6x-wJU44K3vlnSvPm8RHfQA/viewform"
+              class="block mt-5 w-full text-center
+                    px-6 py-3 rounded-lg
+                    bg-orange-500 text-white font-semibold
+                    hover:bg-orange-600 transition">
+              Register Now
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section id="teams" class="relative py-28 bg-slate-950 overflow-hidden">
+
+    <!-- Background glow -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-b
                 from-orange-500/10 via-transparent to-black">
-    </div>
-  </div>
-
-  <div class="relative max-w-7xl mx-auto px-6">
-
-    <!-- TOP GRID -->
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-
-      <!-- TEAM IMAGE -->
-      <div class="relative">
-        <div class="absolute -inset-4 bg-orange-500/20 blur-3xl rounded-3xl"></div>
-
-        <img
-          src="team.jpg"
-          alt="E-Summit Team"
-          class="relative rounded-3xl border border-white/10
-                 shadow-2xl object-cover"
-        />
       </div>
+    </div>
 
-      <!-- TEAM TEXT -->
-      <div>
-        <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full
+    <div class="relative max-w-7xl mx-auto px-6">
+
+      <!-- TOP GRID -->
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- TEAM IMAGE -->
+        <div class="relative">
+          <div class="absolute -inset-4 bg-orange-500/20 blur-3xl rounded-3xl"></div>
+
+          <img src="team.jpg" alt="E-Summit Team" class="relative rounded-3xl border border-white/10
+                 shadow-2xl object-cover" />
+        </div>
+
+        <!-- TEAM TEXT -->
+        <div>
+          <span class="inline-block mb-4 px-4 py-1 text-sm rounded-full
                      bg-orange-500/10 text-orange-400
                      border border-orange-500/20">
-          The People Behind E-Summit
-        </span>
-
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-          The
-          <span class="bg-gradient-to-r from-orange-400 to-orange-600
-                       bg-clip-text text-transparent">
-            Dream Team
+            The People Behind E-Summit
           </span>
-          <br />
-          Behind the Vision
-        </h2>
 
-        <p class="mt-6 text-lg text-gray-300 max-w-xl">
-          A collective of driven students, builders, and leaders who
-          work relentlessly behind the scenes to turn ideas into impact.
-        </p>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            The
+            <span class="bg-gradient-to-r from-orange-400 to-orange-600
+                       bg-clip-text text-transparent">
+              Dream Team
+            </span>
+            <br />
+            Behind the Vision
+          </h2>
 
-        <p class="mt-4 text-gray-400 max-w-xl">
-          From ideation to execution, this team ensures that
-          E-Summit IIT Patna stands as a battlefield where innovation thrives.
-        </p>
+          <p class="mt-6 text-lg text-gray-300 max-w-xl">
+            A collective of driven students, builders, and leaders who
+            work relentlessly behind the scenes to turn ideas into impact.
+          </p>
+
+          <p class="mt-4 text-gray-400 max-w-xl">
+            From ideation to execution, this team ensures that
+            E-Summit IIT Patna stands as a battlefield where innovation thrives.
+          </p>
+        </div>
+      </div>
+
+      <!-- OPTIONAL: TEAM ROLES GRID -->
+      <div class="mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- CARD -->
+        <div class="group bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-6
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <h3 class="text-lg font-semibold text-orange-400">
+            Core Team
+          </h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            Strategy, planning, and execution leaders.
+          </p>
+        </div>
+
+        <div class="group bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-6
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <h3 class="text-lg font-semibold text-orange-400">
+            Tech & Design
+          </h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            Crafting the digital and visual experience.
+          </p>
+        </div>
+
+        <div class="group bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-6
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <h3 class="text-lg font-semibold text-orange-400">
+            Operations
+          </h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            Ensuring flawless on-ground execution.
+          </p>
+        </div>
+
+        <div class="group bg-white/5 backdrop-blur-xl
+                  border border-white/10 rounded-2xl p-6
+                  hover:border-orange-500/40
+                  hover:-translate-y-2 transition-all duration-300">
+
+          <h3 class="text-lg font-semibold text-orange-400">
+            Sponsorship & Outreach
+          </h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            Building partnerships and connections.
+          </p>
+        </div>
+
       </div>
     </div>
 
-    <!-- OPTIONAL: TEAM ROLES GRID -->
-    <div class="mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-      <!-- CARD -->
-      <div class="group bg-white/5 backdrop-blur-xl
-                  border border-white/10 rounded-2xl p-6
-                  hover:border-orange-500/40
-                  hover:-translate-y-2 transition-all duration-300">
-
-        <h3 class="text-lg font-semibold text-orange-400">
-          Core Team
-        </h3>
-        <p class="mt-2 text-gray-300 text-sm">
-          Strategy, planning, and execution leaders.
-        </p>
-      </div>
-
-      <div class="group bg-white/5 backdrop-blur-xl
-                  border border-white/10 rounded-2xl p-6
-                  hover:border-orange-500/40
-                  hover:-translate-y-2 transition-all duration-300">
-
-        <h3 class="text-lg font-semibold text-orange-400">
-          Tech & Design
-        </h3>
-        <p class="mt-2 text-gray-300 text-sm">
-          Crafting the digital and visual experience.
-        </p>
-      </div>
-
-      <div class="group bg-white/5 backdrop-blur-xl
-                  border border-white/10 rounded-2xl p-6
-                  hover:border-orange-500/40
-                  hover:-translate-y-2 transition-all duration-300">
-
-        <h3 class="text-lg font-semibold text-orange-400">
-          Operations
-        </h3>
-        <p class="mt-2 text-gray-300 text-sm">
-          Ensuring flawless on-ground execution.
-        </p>
-      </div>
-
-      <div class="group bg-white/5 backdrop-blur-xl
-                  border border-white/10 rounded-2xl p-6
-                  hover:border-orange-500/40
-                  hover:-translate-y-2 transition-all duration-300">
-
-        <h3 class="text-lg font-semibold text-orange-400">
-          Sponsorship & Outreach
-        </h3>
-        <p class="mt-2 text-gray-300 text-sm">
-          Building partnerships and connections.
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Bottom divider -->
-  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px
+    <!-- Bottom divider -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px
               bg-gradient-to-r from-transparent via-orange-500/30 to-transparent">
-  </div>
+    </div>
 
-</section>
+  </section>
 
 
-<!-- SPONSORS SECTION -->
-<section id="sponsors" class="relative py-32 bg-slate-950 overflow-hidden">
+  <!-- SPONSORS SECTION -->
+  <section id="sponsors" class="relative py-32 bg-slate-950 overflow-hidden">
 
-  <!-- Ambient gold glow -->
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,170,60,0.12),transparent_65%)]"></div>
+    <!-- Ambient gold glow -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,170,60,0.12),transparent_65%)]"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6">
+    <div class="relative max-w-7xl mx-auto px-6">
 
-    <!-- SECTION HEADING -->
-    <div class="text-center mb-20">
-      <h2 class="text-4xl md:text-5xl font-extrabold tracking-wide
+      <!-- SECTION HEADING -->
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-wide
                  bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300
                  bg-clip-text text-transparent">
-        Our Proud Sponsors
-      </h2>
+          Our Proud Sponsors
+        </h2>
 
-      <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-        Organizations that stand shoulder to shoulder in
-        empowering innovation and entrepreneurship.
-      </p>
-    </div>
+        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+          Organizations that stand shoulder to shoulder in
+          empowering innovation and entrepreneurship.
+        </p>
+      </div>
 
-    <!-- SPONSORS GRID -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 place-items-center">
+      <!-- SPONSORS GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16 place-items-center">
 
-      <!-- SPONSOR ITEM -->
-      <div class="group relative">
-        <!-- Glow -->
-        <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
+        <!-- SPONSOR ITEM -->
+        <div class="group relative">
+          <!-- Glow -->
+          <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
                     opacity-0 group-hover:opacity-100 transition"></div>
 
-        <!-- Frame -->
-        <div class="relative w-60 h-60 rounded-2xl
+          <!-- Frame -->
+          <div class="relative w-60 h-60 rounded-2xl
                     bg-gradient-to-br from-[#2a2416] via-[#1b170f] to-black
                     border border-amber-400/40
                     flex items-center justify-center
                     shadow-[0_0_30px_rgba(255,170,60,0.25)]
                     hover:scale-105 transition-all duration-300">
 
-          <img src="sponsors/sponsor1.jpeg"
-               alt="Sponsor"
-               class="max-h-28 object-contain">
+            <img src="sponsors/sponsor1.jpeg" alt="Sponsor" class="max-h-28 object-contain">
+          </div>
         </div>
-      </div>
 
-      <div class="group relative">
-        <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
+        <div class="group relative">
+          <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
                     opacity-0 group-hover:opacity-100 transition"></div>
 
-        <div class="relative w-60 h-60 rounded-2xl
+          <div class="relative w-60 h-60 rounded-2xl
                     bg-gradient-to-br from-[#2a2416] via-[#1b170f] to-black
                     border border-amber-400/40
                     flex items-center justify-center
                     shadow-[0_0_30px_rgba(255,170,60,0.25)]
                     hover:scale-105 transition-all duration-300">
 
-          <img src="/sponsors/sponsor3.png"
-               alt="Sponsor"
-               class="max-h-28 object-contain">
+            <img src="/sponsors/sponsor3.png" alt="Sponsor" class="max-h-28 object-contain">
+          </div>
         </div>
-      </div>
 
-      <div class="group relative">
-        <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
+        <div class="group relative">
+          <div class="absolute -inset-4 bg-amber-400/20 blur-3xl
                     opacity-0 group-hover:opacity-100 transition"></div>
 
-        <div class="relative w-60 h-60 rounded-2xl
+          <div class="relative w-60 h-60 rounded-2xl
                     bg-gradient-to-br from-[#2a2416] via-[#1b170f] to-black
                     border border-amber-400/40
                     flex items-center justify-center
                     shadow-[0_0_30px_rgba(255,170,60,0.25)]
                     hover:scale-105 transition-all duration-300">
 
-          <img src="/sponsors/sponsor2.png"
-               alt="Sponsor"
-               class="max-h-60 object-contain">
+            <img src="/sponsors/sponsor2.png" alt="Sponsor" class="max-h-60 object-contain">
+          </div>
         </div>
+
       </div>
 
-    </div>
+      <!-- CTA -->
+      <div class="mt-28 text-center">
+        <p class="text-gray-400 mb-6">
+          Want to stand with the visionaries?
+        </p>
 
-    <!-- CTA -->
-    <div class="mt-28 text-center">
-      <p class="text-gray-400 mb-6">
-        Want to stand with the visionaries?
-      </p>
-
-      <a href="#"
-         class="inline-block px-12 py-4 rounded-full
+        <a href="#" class="inline-block px-12 py-4 rounded-full
                 text-lg font-semibold
                 bg-gradient-to-r from-amber-400 to-yellow-500
                 text-black
                 shadow-[0_0_40px_rgba(255,180,60,0.6)]
                 hover:scale-105 transition">
-        Partner With Us
-      </a>
+          Partner With Us
+        </a>
+      </div>
+
     </div>
 
-  </div>
-
-  <!-- Bottom divider -->
-  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px
+    <!-- Bottom divider -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-px
               bg-gradient-to-r from-transparent via-amber-400/30 to-transparent">
-  </div>
+    </div>
 
-</section>
+  </section>
 
 
   <!-- FOOTER -->
@@ -1072,7 +1128,8 @@
             class="w-10 h-10 rounded-full flex items-center justify-center">
             <img src="icons-footer/social.png" class="w-[30px] items-center  justify-self-end" alt="instagram">
           </a>
-          <a href="https://www.linkedin.com/school/ecell-iit-patna/posts/?feedView=all" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center">
+          <a href="https://www.linkedin.com/school/ecell-iit-patna/posts/?feedView=all" target="_blank"
+            class="w-10 h-10 rounded-full flex items-center justify-center">
             <img src="icons-footer/linkedin.png" class="w-[30px] items-center  justify-self-end" alt="linkedin">
           </a>
         </div>
@@ -1135,6 +1192,20 @@
 
 
   })*/
+
+  const menu = document.getElementById("mobile-menu");
+
+  function openMenu() {
+    menu.classList.remove("translate-x-full");
+    menu.classList.add("translate-x-0");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    menu.classList.add("translate-x-full");
+    menu.classList.remove("translate-x-0");
+    document.body.style.overflow = "";
+  }
 </script>
 
 </html>
